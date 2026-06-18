@@ -13,6 +13,7 @@ body {
 
 * {
   box-sizing: border-box;
+  border: 1px solid #ff9776;
 }
 
 h1 {
@@ -99,7 +100,7 @@ html.dark {
   }
 
   .card {
-    flex-direction: row; 
+    flex-direction: row;
     max-width: 800px;
   }
   .image-container img {
