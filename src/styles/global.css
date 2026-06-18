@@ -22,15 +22,6 @@ h1 {
 }
 
 /* nav styles */
-.menu {
-  background-color: #0d0950;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
 .nav-links {
   width: 100%;
   display: none;
@@ -64,8 +55,7 @@ html.dark {
 }
 
 .dark .menu {
-  background-color: #fff;
-  color: #000;
+  color: #fff;
 }
 
 .dark .nav-links a:hover,
@@ -96,7 +86,7 @@ html.dark {
   }
 
   .menu {
-    display: none;
+    visibility: hidden;
   }
 
   nav div {
