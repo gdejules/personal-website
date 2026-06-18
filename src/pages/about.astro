@@ -4,9 +4,9 @@ const pageTitle = "About Me";
 
 const identity = {
   firstName: "Juliartha",
-  country: "Indonesia",
-  occupation: "Creative Web Developer",
-  hobbies: ["sketching", "photography", "tennis"],
+  country: "Bali, Indonesia",
+  occupation: "Designer and Creative Web Developer",
+  hobbies: ["sketching", "photography", "tennis", "reading"],
 };
 
 const skills = [
@@ -26,17 +26,13 @@ const happy = true;
 const finished = true;
 const goal = 3;
 
-const skillColor = "crimson";
-const fontWeight = "bold";
+const skillColor = "coral";
+const fontWeight = "medium";
 const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
-    /* h1 {
-      color: purple;
-      font-size: 4rem;
-    } */
     .skill {
       color: var(--skillColor);
       font-weight: var(--fontWeight);
@@ -44,37 +40,18 @@ const textCase = "uppercase";
     }
   </style>
   <h1>About me</h1>
-  <h2>My first live website experiment</h2>
+  <h2>Designer and creative web developer who loves to solve problem through building delightful digital products.</h2>
   <p>
-    I am working thorugh Astro introductory tutorial. This is my second page in
-    the website.
+    I graduated with industrial engineering degree and designing products has been one of my interests. As a fresh graduate I started my career as a marketing executive in a ride-hailing start up which exposed me to digital products and user experience. Then I land my first job as UX Designer and compound various work experience across ui/ux design, user research, market research, content writing, and content design in a design/research studio.
   </p>
   <p>
-    This site will be updated as I learn through the tutorial. Wish me luck!
+    Generalist might be the word but I drawn to product-building and problem solving skills more. I have learned coding skills at school (HTML, C++, SQL) and briefly as ux designer but only at the start of 2026 that I seriously taking the time to learn and practice it in real projects.
   </p>
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[1]} and {identity.hobbies[2]}
-        </li>
-      )
-    }
-  </ul>
   <p>My skills are:</p>
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
-  {happy && <p>I am happy to learn Astro!</p>}
-  {finished && <p>I finished my tutorial.</p>}
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not to finish in 3 days.</p>
-    )
-  }
+  <p>
+    Outside of work, I love playing {identity.hobbies[2]} when I have the time (I used to play like five times a week) and enjoy {identity.hobbies[3]} novels at night. I also used to spend my time {identity.hobbies[0]} faces and indulging in analogue {identity.hobbies[1]}.
+  </p>
 </BaseLayout>
