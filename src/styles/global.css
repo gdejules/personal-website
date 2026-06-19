@@ -1,6 +1,19 @@
+:root {
+  --primary-color: #2c3b4d;
+  --secondary-color: #a35139;
+  --tertiary-color: #ffb162;
+  --muted-color: #c9c1b1;
+  --light-color: #eee9df;
+  --dark-color: #1b2632;
+}
+
 html {
-  background-color: #f1f5f9;
+  background-color: var(--light-color);
   font-family: sans-serif;
+  color: var(--dark-color);
+  /* keep vertical scrollbar space stable to avoid layout shifts between pages */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -10,10 +23,13 @@ body {
   padding-inline: 1rem;
   padding-bottom: 1rem;
   line-height: 1.5;
+  /* ensure body fills viewport so footer placement is consistent */
+  min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
+  /* border: 1px solid whitesmoke; */
 }
 
 h1 {
@@ -27,8 +43,8 @@ h1 {
   flex-direction: column;
   gap: 12px;
   flex-wrap: wrap;
-  background-color: powderblue;
-  color: #0d0950;
+  background-color: var(--muted-color);
+  color: var(--dark-color);
   padding: 8px 20px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -37,13 +53,13 @@ h1 {
 .section-header .main {
   flex: 0 0 auto;
   width: max-content;
-  font-size: 1.2 rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .section-header .description {
   flex: 1 1 0;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -60,14 +76,16 @@ h1 {
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
-  color: #0d0950;
+  color: var(--primary-color);
+  border-bottom: 1px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: powderblue;
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
@@ -75,12 +93,12 @@ h1 {
   position: absolute;
   top: 40px;
   left: 0px;
-  background-color: dimgrey;
+  background-color: var(--muted-color);
 }
 
 /* dark mode */
 html.dark {
-  background-color: #0d0950;
+  background-color: var(--dark-color);
   color: #fff;
 }
 
@@ -90,7 +108,8 @@ html.dark {
 
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
-  color: #0d0950;
+  color: var(--tertiary-color);
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .dark .nav-links a {
@@ -98,7 +117,12 @@ html.dark {
 }
 
 .dark a {
-  color: #ff9776;
+  color: var(--tertiary-color);
+}
+
+.dark .section-header {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 @media screen and (min-width: 636px) {
@@ -117,7 +141,8 @@ html.dark {
 
   .nav-links a {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 2px 4px;
+    margin-right: 16px;
   }
 
   .menu {
