@@ -24,13 +24,6 @@ const skills = [
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style>
-    .skill {
-      font-family: var(--font-merriweather);
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-  </style>
   <h1>About me</h1>
   <h2>Designer and creative web developer who loves to solve problem through building delightful digital products.</h2>
   <p>
@@ -46,4 +39,29 @@ const skills = [
   <p>
     Outside of work, I love playing {identity.hobbies[2]} when I have the time (I used to play like five times a week) and enjoy {identity.hobbies[3]} novels at night. I also used to spend my time {identity.hobbies[0]} faces and indulging in analogue {identity.hobbies[1]}.
   </p>
+
+  <style>
+    h1 {
+      margin: 1rem 0;
+      font-size: 2.5rem;
+      font-family: var(--font-lato);
+      font-weight: 900;
+    }
+
+    h2 {
+      font-family: var(--font-lato);
+      font-weight: 700;
+    }
+
+    p {
+      font-family: var(--font-merriweather);
+      font-weight: 400;
+    }
+
+    .skill {
+      font-family: var(--font-merriweather);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  </style>
 </BaseLayout>
