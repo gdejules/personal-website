@@ -8,8 +8,23 @@ const pageTitle = "My Learning Blog";
 <BaseLayout pageTitle={pageTitle}>
   <h1>Writing</h1>
   <h2>Words about my thoughts, experiences, and some of my works.</h2>
-  <!-- <p>I will frequently write and post about my learning journey here!</p> -->
   <ul style="display: flex; flex-wrap: wrap; gap: 24px; padding: 0; margin: 0;">
     {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} image={post.data.image.url} alt={post.data.image.alt} desc={post.data.description}/>)}
   </ul>
+  <style>
+    h1 {
+      font-family: var(--font-lato);
+      font-weight: 900;
+    }
+
+    h2 {
+      font-family: var(--font-lato);
+      font-weight: 700;
+    }
+
+    p {
+      font-family: var(--font-merriweather);
+      font-weight: 500;
+    }
+  </style>
 </BaseLayout>
