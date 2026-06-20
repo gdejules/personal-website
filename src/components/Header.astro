@@ -3,7 +3,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 import Menu from "./Menu.astro";
 import Navigation from "./Navigation.astro";
 ---
-<header>
+<header class="header">
     <nav>
       <Navigation />
         <div>
@@ -14,8 +14,8 @@ import Navigation from "./Navigation.astro";
 </header>
 
 <style>
-  header {
-    max-height: min-content;
+  .header {
+    padding: 1rem 1.5rem;
   }
 
   nav {
