@@ -33,19 +33,17 @@ body {
 }
 
 /* section header */
-.section-header {
+.top-wrapper {
   display: flex;
   flex-direction: column;
   gap: 12px;
   flex-wrap: wrap;
   background-color: var(--muted-color);
   color: var(--dark-color);
-  padding: 8px 20px;
-  margin-top: 0;
-  margin-bottom: 20px;
+  padding: 1rem 1.5rem;
 }
 
-.section-header .main {
+.top-wrapper .main {
   flex: 0 0 auto;
   width: max-content;
   font-family: var(--font-lato);
@@ -53,7 +51,7 @@ body {
   font-weight: 700;
 }
 
-.section-header .description {
+.top-wrapper .description {
   flex: 1 1 0;
   font-family: var(--font-lato);
   font-size: 1rem;
@@ -125,7 +123,7 @@ html.dark {
 }
 
 @media screen and (min-width: 636px) {
-  .section-header {
+  .top-wrapper {
     flex-direction: row;
     align-items: center;
   }
