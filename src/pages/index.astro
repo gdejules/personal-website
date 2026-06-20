@@ -1,26 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
-const pageTitle = "Gde Juliartha Arief";
+const pageTitle = "Gde Juliartha";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Hi, I'm Gde Juliartha</h1>
-  <h2>A designer and creative web developer who strive to build delightful digital experiences</h2>
+  <main id="main-content">
+    <h1>Hi, I'm Gde Juliartha Arief</h1>
+    <h2>A product designer and creative web developer who strive to build delightful digital experiences.</h2>
+    <p>
+      Recently I'm exploring web development practices and learning about static-site generator including Astro framework which is the base of this website. Prior to this year, my work experiences ranging from marketing, ui/ux design, user research, market research, and content writing. I like to brainstorm ideas to solve problems and design experiences.
+    </p>
+    <p>
+      I build this site as my digital garden where I can pour any ideas, thoughts, experiences, and work stuffs. This garden is still continously built and its 'plants' will be added periodically.
+    </p>
+  </main>
 
   <style>
     h1 {
       margin: 1rem 0;
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
       font-family: var(--font-lato);
       font-weight: 900;
     }
 
     h2 {
+      font-size: clamp(1.3rem, 1rem + 2vw, 1.8rem);
       font-family: var(--font-lato);
       font-weight: 700;
     }
 
     p {
+      font-size: clamp(1rem, 1.1rem, 1.2rem);
       font-family: var(--font-merriweather);
       font-weight: 400;
     }

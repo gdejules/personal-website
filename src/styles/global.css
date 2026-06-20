@@ -27,12 +27,21 @@ body {
   min-height: 100vh;
 }
 
+main {
+  padding: 1rem 1.5rem;
+}
+
 * {
   box-sizing: border-box;
   /* border: 1px solid whitesmoke; */
 }
 
 /* section header */
+.header,
+.top-wrapper {
+  padding: 1rem 1.5rem;
+}
+
 .top-wrapper {
   display: flex;
   flex-direction: column;
@@ -40,7 +49,6 @@ body {
   flex-wrap: wrap;
   background-color: var(--muted-color);
   color: var(--dark-color);
-  padding: 1rem 1.5rem;
 }
 
 .top-wrapper .main {
@@ -123,6 +131,14 @@ html.dark {
 }
 
 @media screen and (min-width: 636px) {
+  .top-wrapper,
+  .header,
+  .top-wrapper,
+  footer {
+    padding: 1rem clamp(1rem, 30%, 6rem);
+    margin-bottom: 1rem;
+  }
+
   .top-wrapper {
     flex-direction: row;
     align-items: center;
@@ -150,10 +166,16 @@ html.dark {
     flex: 0 0 auto;
   }
 
+  main {
+    margin: 0 clamp(1rem, 20%, 30%);
+    padding: 1rem 2rem;
+  }
+
   .card {
     flex-direction: row;
     max-width: 800px;
   }
+
   .image-container img {
     width: 40%; /* Image takes 40% of width in horizontal mode */
   }

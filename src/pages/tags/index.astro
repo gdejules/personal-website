@@ -5,18 +5,28 @@ const allPosts = await getCollection("blog");
 const tags = [
   ...new Set(allPosts.map((post: any) => post.data.tags).flat())
 ];
-const pageTitle = "Tag Index";
+const pageTitle = "Tag Index | Gde Juliartha";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="tags">
-    {tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))}
-  </div>
+  <main id="main-content">
+    <h1>All article tags</h1>
+    <div class="tags">
+      {tags.map((tag) => (
+          <p class="tag">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))}
+    </div>
+  </main>
   <style>
+    h1 {
+      margin: 1rem 0;
+      font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
+      font-family: var(--font-lato);
+      font-weight: 900;
+    }
+
     a {
       color: #00539f;
     }

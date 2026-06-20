@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About Me";
+const pageTitle = "About me | Gde Juliartha";
 
 const identity = {
   firstName: "Juliartha",
@@ -24,39 +24,42 @@ const skills = [
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>About me</h1>
-  <h2>Designer and creative web developer who loves to solve problem through building delightful digital products.</h2>
-  <p>
-    I graduated with industrial engineering degree and designing products has been one of my interests. As a fresh graduate I started my career as a marketing executive in a ride-hailing start up which exposed me to digital products and user experience. Then I land my first job as UX Designer and compound various work experience across ui/ux design, user research, market research, content writing, and content design in a design/research studio.
-  </p>
-  <p>
-    Generalist might be the word but I drawn to product-building and problem solving skills more. I have learned coding skills at school (HTML, C++, SQL) and briefly as ux designer but only at the start of 2026 that I seriously taking the time to learn (HTML, CSS, JavaScript, React) and practice it in real projects.
-  </p>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  <p>
-    Outside of work, I love playing {identity.hobbies[2]} when I have the time (I used to play like five times a week) and enjoy {identity.hobbies[3]} novels at night. I also used to spend my time {identity.hobbies[0]} faces and indulging in analogue {identity.hobbies[1]}.
-  </p>
+  <main id="main-content">
+    <h1>About me</h1>
+    <h2>Designer and creative web developer who loves to solve problem through building delightful digital products.</h2>
+    <p>
+      I graduated with industrial engineering degree and designing products has been one of my interests. As a fresh graduate I started my career as a marketing executive in a ride-hailing start up which exposed me to digital products and user experience. Then I land my first job as UX Designer and compound various work experience across ui/ux design, user research, market research, content writing, and content design in a design/research studio.
+    </p>
+    <p>
+      Generalist might be the word but I drawn to product-building and problem solving skills more. I have learned coding skills at school (HTML, C++, SQL) and briefly as ux designer but only at the start of 2026 that I seriously taking the time to learn (HTML, CSS, JavaScript, React) and practice it in real projects.
+    </p>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+    <p>
+      Outside of work, I love playing {identity.hobbies[2]} when I have the time (I used to play like five times a week) and enjoy {identity.hobbies[3]} novels at night. I also used to spend my time {identity.hobbies[0]} faces and indulging in analogue {identity.hobbies[1]}.
+    </p>
+  </main>
 
   <style>
     h1 {
       margin: 1rem 0;
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
       font-family: var(--font-lato);
       font-weight: 900;
     }
 
     h2 {
+      font-size: clamp(1.3rem, 1rem + 2vw, 1.8rem);
       font-family: var(--font-lato);
       font-weight: 700;
     }
 
     p {
+      font-size: clamp(1rem, 1.1rem, 1.2rem);
       font-family: var(--font-merriweather);
       font-weight: 400;
-      line-height: 1.75;
     }
 
     .skill {
