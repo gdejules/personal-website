@@ -168,7 +168,7 @@ html.dark {
 
   main {
     margin: 0 clamp(1rem, 20%, 30%);
-    padding: 1rem 2rem;
+    padding: 0 2rem;
   }
 
   .card {
