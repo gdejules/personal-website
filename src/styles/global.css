@@ -130,6 +130,10 @@ html.dark {
   color: #fff;
 }
 
+.dark footer a {
+  color: white;
+}
+
 @media screen and (min-width: 636px) {
   .top-wrapper,
   .header,
