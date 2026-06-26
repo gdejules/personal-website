@@ -33,7 +33,6 @@ main {
 
 * {
   box-sizing: border-box;
-  /* border: 1px solid whitesmoke; */
 }
 
 /* section header */
@@ -130,7 +129,12 @@ html.dark {
   color: #fff;
 }
 
-.dark footer a {
+.dark body footer {
+  border-top: 1px solid var(--primary-color);
+}
+
+.dark footer .socials a,
+.dark footer span {
   color: white;
 }
 
