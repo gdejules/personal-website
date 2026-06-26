@@ -2,28 +2,26 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-
-<BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by {frontmatter.author}</p>
-  <p>Published on: {frontmatter.pubDate.toLocaleDateString()}</p>
-  <img
-    src={frontmatter.image.url}
-    style="max-width: 100%; height: auto;"
-    alt={frontmatter.image.alt}
-  />
-  <slot />
-  <div class="tag-list">
-    {frontmatter.tags.map((tag: string) => (
-      <p class="blog-tag">
-        <a href={`/tags/${tag}`}>{tag}</a>
-      </p>
-      ))}
-    <!-- {frontmatter.tags.map((tag: string) => <li class="blog-tag">{tag}</li>)} -->
-  </div>
-</BaseLayout>
-
 <style>
+  h1 {
+    margin: 1rem 0;
+    font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
+    font-family: var(--font-lato);
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 1rem + 2vw, 1.8rem);
+    font-family: var(--font-lato);
+    font-weight: 700;
+  }
+
+  p {
+    font-size: clamp(1rem, 1.1rem, 1.2rem);
+    font-family: var(--font-merriweather);
+    font-weight: 400;
+  }
+    
   a {
       color: purple;
       text-decoration: none;
@@ -45,3 +43,24 @@ const { frontmatter } = Astro.props;
     font-size: 14px;
   }
 </style>
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p><em>{frontmatter.description}</em></p>
+  <p>Written by {frontmatter.author}</p>
+  <p>Published on: {frontmatter.pubDate.toLocaleDateString()}</p>
+  <img
+    src={frontmatter.image.url}
+    style="max-width: 100%; height: auto;"
+    alt={frontmatter.image.alt}
+  />
+  <slot />
+  <div class="tag-list">
+    {frontmatter.tags.map((tag: string) => (
+      <p class="blog-tag">
+        <a href={`/tags/${tag}`}>{tag}</a>
+      </p>
+      ))}
+    <!-- {frontmatter.tags.map((tag: string) => <li class="blog-tag">{tag}</li>)} -->
+  </div>
+</BaseLayout>
