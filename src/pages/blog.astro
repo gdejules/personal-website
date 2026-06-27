@@ -7,29 +7,8 @@ const pageTitle = "Articles | Gde Juliartha";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h1>Writing</h1>
-  <h2>Words about my ideas, thoughts, experiences, and some of my works.</h2>
+  <h2>Essays about my works, thoughts, experiences, and others that I find interesting.</h2>
   <ul style="display: flex; flex-wrap: wrap; gap: 24px; padding: 0; margin: 0;">
     {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} image={post.data.image.url} alt={post.data.image.alt} desc={post.data.description}/>)}
   </ul>
-
-  <style>
-    /* h1 {
-      margin: 1rem 0;
-      font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
-      font-family: var(--font-lato);
-      font-weight: 900;
-    }
-
-    h2 {
-      font-size: clamp(1.3rem, 1rem + 2vw, 1.8rem);
-      font-family: var(--font-lato);
-      font-weight: 700;
-    }
-
-    p {
-      font-size: clamp(1rem, 1.1rem, 1.2rem);
-      font-family: var(--font-merriweather);
-      font-weight: 400;
-    } */
-  </style>
 </BaseLayout>
