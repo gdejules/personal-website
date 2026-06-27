@@ -36,11 +36,19 @@ The last phase was user testing and development support. We interviewed the same
 
 The existing tool was already capable of covering administrative work and managing customized features for different kinds of employees. For example, accountants were only exposed with features related to billing and accounting. But all employees have access to Inbox, where all requests (like paid leave and approval) and tasks (like supervising certain project progress) was managed.
 
+![Interface of the homepage and inbox feature of the tool before redesign](../assets/quantum/existing-homepage.png)
+
 One of the insights of our research revealed that most friction stemmed from poor interface usability (long forms, multiple buttons without clear hierarchy). Our principal designer came up with the direction to turn the entire experience into a dashboard, which can help employees to intuitively get into their task since the first time they visited the tool. The Inbox feature became the central function in the tool homepage, which started the user flow to other modules they need to work on at the beginning of the day.
+
+![Interface of the homepage after redesigned](../assets/quantum/rev-dashboard.png)
 
 ## Understanding How Users Actually Work
 
+![Interface of the general ledger feature before redesign](../assets/quantum/existing-gl.png)
+
 One of the modules that I redesigned was the General Ledger, which was a tool the accounting team underutilized because usability friction pushed them toward external alternatives. They migrated the financial data from the internal tool every time they did their tasks. Based on the understanding of their workflows and needs to use alternative tools, I came up with the revamped General Ledger interface. During the usability testing session, the revamped version has met the expected functionality and proven to provide sufficient support for the accounting team. This improvement helped the team to work more efficiently and seamlessly since they do not need to operate different tools.
+
+![Interface of general ledger feature after redesign](../assets/quantum/rev-gl.png)
 
 ## Outcome
 
