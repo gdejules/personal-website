@@ -4,8 +4,8 @@ pubDate: 2026-06-26
 description: "A web-based internal tool redesign project."
 author: "Gde Juliartha"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+  url: ""
+  alt: ""
 tags:
   [
     "ux design",
@@ -17,6 +17,12 @@ tags:
     "user research",
   ]
 ---
+
+import { Image } from "astro:assets";
+import home from "../assets/quantum/existing-homepage.png";
+import revHome from "../assets/quantum/rev-dashboard.png";
+import ledger from "../assets/quantum/existing-gl.png";
+import revLedger from "../assets/quantum/rev-gl.png";
 
 In late 2021, I led the UI/UX revamp of an internal ERP system for one of the top tier law firms in Indonesia. The interface hadn't kept pace with the firm's needs and some critical workflows were being split between our tool and external software. My role was to understand why and redesign the experience accordingly.
 
@@ -36,19 +42,63 @@ The last phase was user testing and development support. We interviewed the same
 
 The existing tool was already capable of covering administrative work and managing customized features for different kinds of employees. For example, accountants were only exposed with features related to billing and accounting. But all employees have access to Inbox, where all requests (like paid leave and approval) and tasks (like supervising certain project progress) was managed.
 
-![Interface of the homepage and inbox feature of the tool before redesign](../assets/quantum/existing-homepage.png)
+<figure>
+  <Image
+    src={home}
+    alt="Interface of the homepage and inbox feature of the tool before redesign"
+    layout="full-width"
+  />
+  <figcaption>
+    The interface when users land on the tool (top) and the interface when users
+    access Inbox feature (bottom).
+  </figcaption>
+</figure>
 
 One of the insights of our research revealed that most friction stemmed from poor interface usability (long forms, multiple buttons without clear hierarchy). Our principal designer came up with the direction to turn the entire experience into a dashboard, which can help employees to intuitively get into their task since the first time they visited the tool. The Inbox feature became the central function in the tool homepage, which started the user flow to other modules they need to work on at the beginning of the day.
 
-![Interface of the homepage after redesigned](../assets/quantum/rev-dashboard.png)
+<figure>
+  <Image
+    src={revHome}
+    alt="Interface of the homepage after redesigned"
+    layout="full-width"
+  />
+  <figcaption>
+    Homepage interface was displaying Inbox feature to improved task management
+    and selected menus (at the top) that were important for its users (what
+    menus to display can be customised).
+  </figcaption>
+</figure>
 
 ## Understanding How Users Actually Work
 
-![Interface of the general ledger feature before redesign](../assets/quantum/existing-gl.png)
+<figure>
+  <Image
+    src={ledger}
+    alt="Interface of the general ledger feature before redesign"
+    layout="full-width"
+  />
+  <figcaption>
+    General Ledger interface before redesign displayed list of accounts and the
+    details of selected account in the same page, which made it a hassle to scan
+    for specific entry.
+  </figcaption>
+</figure>
 
 One of the modules that I redesigned was the General Ledger, which was a tool the accounting team underutilized because usability friction pushed them toward external alternatives. They migrated the financial data from the internal tool every time they did their tasks. Based on the understanding of their workflows and needs to use alternative tools, I came up with the revamped General Ledger interface. During the usability testing session, the revamped version has met the expected functionality and proven to provide sufficient support for the accounting team. This improvement helped the team to work more efficiently and seamlessly since they do not need to operate different tools.
 
-![Interface of general ledger feature after redesign](../assets/quantum/rev-gl.png)
+<figure>
+  <Image
+    src={revLedger}
+    alt="Interface of the general ledger feature after redesign"
+    layout="full-width"
+  />
+  <figcaption>
+    Redesigned General Ledger separated list of account and account details for
+    better information display. The account details page also displayed end
+    balance number fixed at the bottom of the page based on account team work
+    preference.
+  </figcaption>
+</figure>
 
 ## Outcome
 
