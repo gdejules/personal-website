@@ -1,83 +1,40 @@
 ---
-const { url, title, image, alt, desc } = Astro.props;
+const { url, title, date } = Astro.props;
 ---
-
-<div class="card">
-  <div class="image-container">
-    <img src={image} alt={alt} />
-    <div class="image-overlay">
-      <h4 class="card-title">
-        <a href={url} class="main-link">{title}</a>
-      </h4>
-    </div>
-  </div>
-  <div class="card-content">
-    <p>{desc}</p>
-  </div>
-</div>
-
 <style>
-  .card {
-    position: relative;
+  .list {
     display: flex;
-    flex-direction: column; /*Stack image and text by default*/
-    max-width: 280px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /*margin-bottom: 24px;*/
+    align-items: start;
+    gap: 24px;
   }
 
-  .image-container {
-    position: relative; /* Becomes the anchor point for the title */
-    display: inline-flex;
-    width: 100%;
+  .date {
+    max-width: 12ch;
+    flex: 0 0 auto;
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: clamp(0.9rem, 1rem + 1vw, 1.2rem);
+    color: gray;
   }
 
-  .image-container img {
-    width: 100%;
-    display: block;
+  .title {
+    flex: 1;
   }
 
-  .image-overlay {
-    position: absolute;
-    bottom: 0; /* Pins it to the bottom */
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(
-      transparent,
-      rgba(0, 0, 0, 0.7)
-    ); /* Gradient makes text readable */
-    color: white;
-  }
-
-  .card-title {
-    margin: 0;
-    font-size: 1.25rem;
-  }
-
-  .main-link {
+  .article-link {
     text-decoration: none;
     color: inherit;
+    font-family: var(--font-merriweather);
+    font-weight: 500;
+    font-size: clamp(0.9rem, 1rem + 1vw, 1.2rem);
   }
 
-  .card-content {
-    font-size: 14px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 80px;
-    vertical-align: top;
-  }
-
-  /* This expands the title link's clickable area to the full card */
-  .main-link::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1; /* Ensures it sits on top of everything else */
+  .article-link:hover {
+    color: var(--secondary-color);
   }
 </style>
+
+<div class="list">
+  <span class="date">{date}</span>
+  <span class="title"><a href={url} class="article-link">{title}</a></span>
+</div>

@@ -2,13 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
+import { options } from "preact";
 const allPosts = await getCollection("blog");
 const pageTitle = "Articles | Gde Juliartha";
+const shorten = { 
+  year: 'numeric', 
+  month: 'short', // Use 'short' for "Jun"
+  day: 'numeric' 
+};
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h1>Writing</h1>
   <h2>Essays about my works, thoughts, experiences, and others that I find interesting.</h2>
-  <ul style="display: flex; flex-wrap: wrap; gap: 24px; padding: 0; margin: 0;">
-    {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} image={post.data.image.url} alt={post.data.image.alt} desc={post.data.description}/>)}
+  <ul style="display: flex; flex-direction: column; gap: 24px; padding: 0; margin: 0;">
+    {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} image={post.data.image.url} alt={post.data.image.alt} desc={post.data.description} date={post.data.pubDate.toLocaleDateString('en-US', shorten)}/>)}
   </ul>
 </BaseLayout>
