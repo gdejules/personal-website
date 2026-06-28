@@ -54,6 +54,7 @@ const { frontmatter } = Astro.props;
     style="max-width: 100%; height: auto;"
     alt={frontmatter.image.alt}
   />
+  <p style="font-size: clamp(0.8rem, 0.9rem, 1rem); font-weight: 300; font-style: italic; text-align: right; margin: 0;">{frontmatter.image.caption}</p>
   <slot />
   <div class="tag-list">
     {frontmatter.tags.map((tag: string) => (

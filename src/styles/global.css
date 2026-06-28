@@ -26,11 +26,12 @@ p {
   font-weight: 300;
 }
 
-figcaption {
-  font-size: clamp(0.8rem, 1rem, 1.1rem);
+figcaption p {
+  font-size: clamp(0.8rem, 0.9rem, 1rem);
   font-family: var(--font-merriweather);
   font-weight: 300;
   font-style: italic;
+  margin-top: 0;
 }
 
 html {
@@ -45,16 +46,21 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  /* max-width: 80ch; */
-  /* padding-inline: 1rem; */
   padding-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   /* ensure body fills viewport so footer placement is consistent */
   min-height: 100vh;
 }
 
-main {
-  padding: 1rem 1.5rem;
+.top-wrapper,
+.header,
+main,
+footer {
+  --page-inline-padding: 1.5rem;
+  --page-width: calc(100vw - var(--page-inline-padding) * 2);
+  max-width: var(--page-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 figure img {
@@ -66,10 +72,13 @@ figure img {
   box-sizing: border-box;
 }
 
-/* section header */
-.header,
-.top-wrapper {
-  padding: 1rem 1.5rem;
+.section-banner,
+.header {
+  padding-block: 1rem;
+}
+
+.section-banner {
+  background-color: var(--muted-color);
 }
 
 .top-wrapper {
@@ -77,7 +86,6 @@ figure img {
   flex-direction: column;
   gap: 12px;
   flex-wrap: wrap;
-  background-color: var(--muted-color);
   color: var(--dark-color);
 }
 
@@ -155,9 +163,12 @@ html.dark {
   color: var(--tertiary-color);
 }
 
-.dark .top-wrapper {
+.dark .section-banner {
   background-color: var(--primary-color);
-  color: #fff;
+}
+
+.dark .top-wrapper {
+  color: #ffffff;
 }
 
 .dark body footer {
@@ -169,15 +180,7 @@ html.dark {
   color: white;
 }
 
-@media screen and (min-width: 636px) {
-  .top-wrapper,
-  .header,
-  .top-wrapper,
-  footer {
-    padding: 1rem clamp(1rem, 30%, 6rem);
-    margin-bottom: 1rem;
-  }
-
+@media screen and (min-width: 720px) {
   .top-wrapper {
     flex-direction: row;
     align-items: center;
@@ -205,9 +208,16 @@ html.dark {
     flex: 0 0 auto;
   }
 
-  main {
-    margin-inline: clamp(1rem, 20%, 30%);
-    padding: 0 2rem;
+  .top-wrapper,
+  .header,
+  main,
+  footer {
+    --page-inline-padding: 1.5rem;
+    --page-width: 720px;
+    max-width: var(--page-width);
+    padding-inline: var(--page-inline-padding);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .card {
