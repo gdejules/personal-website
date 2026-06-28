@@ -31,6 +31,6 @@ export default defineConfig({
       display: "swap",
     },
   ],
-  site: "https://randomnauts.netlify.app/",
+  site: "https://jules-codes.onrender.com",
   integrations: [preact(), mdx()],
 });
