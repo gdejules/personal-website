@@ -9,25 +9,25 @@
 
 h1 {
   margin: 1rem 0;
-  font-size: clamp(1.5rem, 1rem + 3vw, 2.5rem);
+  font-size: clamp(1.4rem, 1rem + 3vw, 2rem);
   font-family: var(--font-lato);
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(1.3rem, 1rem + 2vw, 1.8rem);
+  font-size: clamp(1.2rem, 1rem + 2vw, 1.4rem);
   font-family: var(--font-lato);
   font-weight: 700;
 }
 
 p {
-  font-size: clamp(1rem, 1.1rem, 1.2rem);
+  font-size: clamp(0.9rem, 1rem + 1vw, 1.2rem);
   font-family: var(--font-merriweather);
   font-weight: 300;
 }
 
 figcaption p {
-  font-size: clamp(0.8rem, 0.9rem, 1rem);
+  font-size: clamp(0.8rem, 0.9rem + 1vw, 1.1rem);
   font-family: var(--font-merriweather);
   font-weight: 300;
   font-style: italic;
@@ -56,7 +56,7 @@ body {
 .header,
 main,
 footer {
-  --page-inline-padding: 1.5rem;
+  --page-inline-padding: 2rem;
   --page-width: calc(100vw - var(--page-inline-padding) * 2);
   max-width: var(--page-width);
   margin-left: auto;
@@ -209,11 +209,16 @@ html.dark {
   }
 
   .top-wrapper,
-  .header,
+  .header {
+    --page-inline-padding: 4rem;
+    --page-width: calc(100vw - var(--page-inline-padding) * 2);
+    max-width: var(--page-width);
+  }
+
   main,
   footer {
-    --page-inline-padding: 1.5rem;
-    --page-width: 720px;
+    --page-inline-padding: 3rem;
+    --page-width: 88ch;
     max-width: var(--page-width);
     padding-inline: var(--page-inline-padding);
     margin-left: auto;
