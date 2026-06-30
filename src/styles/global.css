@@ -79,7 +79,7 @@ figure img {
 
 .section-banner,
 .header {
-  padding-block: 1rem;
+  padding-block: 0.8rem;
 }
 
 .section-banner {
@@ -89,7 +89,7 @@ figure img {
 .top-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
   flex-wrap: wrap;
   color: var(--dark-color);
 }
@@ -98,15 +98,18 @@ figure img {
   flex: 0 0 auto;
   width: max-content;
   font-family: var(--font-lato);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 0.9rem);
+  font-weight: 500;
 }
 
 .top-wrapper .description {
   flex: 1 1 0;
   font-family: var(--font-lato);
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 0.9rem);
   font-weight: 300;
+  > a {
+    color: var(--dark-color);
+  }
 }
 
 /* nav styles */
@@ -172,7 +175,8 @@ html.dark {
   background-color: var(--primary-color);
 }
 
-.dark .top-wrapper {
+.dark .top-wrapper,
+.dark .top-wrapper .description a {
   color: #ffffff;
 }
 
