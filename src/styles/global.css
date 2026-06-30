@@ -117,6 +117,7 @@ figure img {
   width: 100%;
   display: none;
   margin: 0;
+  border-radius: 16px;
 }
 
 .nav-links a {
@@ -163,8 +164,11 @@ html.dark {
   border-bottom: 1px solid var(--tertiary-color);
 }
 
-.dark .nav-links a {
-  color: #fff;
+.dark #main-menu {
+  background-color: var(--primary-color);
+  > a {
+    color: #fff;
+  }
 }
 
 .dark a {
@@ -211,6 +215,10 @@ html.dark {
 
   .menu {
     visibility: hidden;
+  }
+
+  .dark #main-menu {
+    background-color: var(--dark-color);
   }
 
   nav div {
