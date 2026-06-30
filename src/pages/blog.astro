@@ -15,6 +15,6 @@ const shorten = {
   <h1>Writing</h1>
   <h2>Essays about my works, thoughts, experiences, and others that I find interesting.</h2>
   <ul style="display: flex; flex-direction: column; gap: 24px; padding: 0; margin: 0;">
-    {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} image={post.data.image.url} alt={post.data.image.alt} desc={post.data.description} date={post.data.pubDate.toLocaleDateString('en-US', shorten)}/>)}
+    {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} date={post.data.pubDate.toLocaleDateString('en-US', shorten)} readTime={post.data.readTime}/>)}
   </ul>
 </BaseLayout>

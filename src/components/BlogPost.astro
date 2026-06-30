@@ -1,20 +1,11 @@
 ---
-const { url, title, date } = Astro.props;
+const { url, title, date, readTime } = Astro.props;
 ---
 <style>
   .list {
     display: flex;
+    flex-direction: column;
     align-items: start;
-    gap: 24px;
-  }
-
-  .date {
-    max-width: 12ch;
-    flex: 0 0 auto;
-    font-family: var(--font-lato);
-    font-weight: 400;
-    font-size: clamp(0.7rem, 0.9rem + 1vw, 1.1rem);
-    color: gray;
   }
 
   .title {
@@ -35,6 +26,9 @@ const { url, title, date } = Astro.props;
 </style>
 
 <div class="list">
-  <span class="date">{date}</span>
+  <div class="article-label">
+    <span>{date}</span>
+    <span>{readTime}</span>
+  </div>
   <span class="title"><a href={url} class="article-link">{title}</a></span>
 </div>
