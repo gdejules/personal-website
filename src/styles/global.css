@@ -222,6 +222,7 @@ html.dark {
   .top-wrapper {
     flex-direction: row;
     align-items: center;
+    gap: 16px;
   }
 
   .nav-links {
