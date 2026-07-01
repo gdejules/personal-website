@@ -93,7 +93,6 @@ figure img {
   flex-direction: column;
   gap: 4px;
   flex-wrap: wrap;
-  color: var(--dark-color);
 }
 
 .top-wrapper .main {
@@ -109,13 +108,19 @@ figure img {
   font-family: var(--font-lato);
   font-size: clamp(0.7rem, 0.7rem + 1vw, 0.9rem);
   font-weight: 300;
-  > a {
-    color: var(--dark-color);
-  }
 }
 
 .menu {
   color: var(--dark-color);
+}
+
+.now {
+  padding: 1rem;
+  border-left: 4px solid var(--tertiary-color);
+  background-color: var(--muted-color);
+  > p {
+    margin: 0;
+  }
 }
 
 .article-label {
@@ -149,8 +154,7 @@ footer .socials {
   }
 }
 
-.socials div:hover,
-.socials div a:hover {
+.socials div:hover {
   color: var(--secondary-color);
   text-decoration: underline;
 }
@@ -164,16 +168,13 @@ footer .socials {
 }
 
 .nav-links a {
-  display: block;
   text-align: center;
-  padding: 10px 0;
   text-decoration: none;
   font-family: var(--font-lato);
   font-weight: 400;
   font-size: 1.2rem;
   font-weight: normal;
   text-transform: uppercase;
-  color: var(--primary-color);
   border-bottom: 1px solid transparent;
 }
 
@@ -189,6 +190,14 @@ footer .socials {
   top: 40px;
   left: 0px;
   background-color: var(--muted-color);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--secondary-color);
 }
 
 /* dark mode */
@@ -209,9 +218,10 @@ html.dark {
 
 .dark #main-menu {
   background-color: var(--primary-color);
-  > a {
-    color: #fff;
-  }
+}
+
+.dark a {
+  color: inherit;
 }
 
 .dark a:hover {
@@ -222,26 +232,20 @@ html.dark {
   background-color: var(--primary-color);
 }
 
-.dark .top-wrapper,
-.dark .top-wrapper .description a {
-  color: #ffffff;
+.dark .now {
+  border-left: 4px solid var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .dark body footer {
   border-top: 1px solid var(--primary-color);
 }
 
-.dark footer .socials a,
-.dark footer span {
-  color: white;
-}
-
 .dark .article-label span {
   color: var(--white-lower-opacity);
 }
 
-.dark .socials div:hover,
-.dark .socials div a:hover {
+.dark .socials div:hover {
   color: var(--tertiary-color);
   text-decoration: underline;
 }
