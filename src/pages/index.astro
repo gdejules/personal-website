@@ -1,20 +1,47 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Greeting from "../components/Greeting";
 const pageTitle = "Gde Juliartha";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Hi, I'm Gde Juliartha Arief</h1>
-  <h2>I’m a product designer, web designer, and web developer who builds systems, products, and experiences that work for enterprises and customers.</h2>
+  <h1>Hi, I'm Gde Juliartha</h1>
+  <h2>
+    I’m a product designer, web designer, and web developer who builds systems,
+    products, and experiences that work for enterprises and customers.
+  </h2>
   <p>
-    I’ve spent 4+ years as a designer and researcher, curious about customer behavior and the products that solve their problems. Right now I’m focusing on web design and development as I’m more passionate about building delightful web and mobile experiences for B2B and B2C brands.
+    I’ve spent 4+ years as a designer and researcher, curious about customer
+    behavior and the products that solve their problems. Right now I’m focusing
+    on web design and development as I’m more passionate about building
+    delightful web and mobile experiences for B2B and B2C brands.
+  </p>
+  <p>
+    I built this site as my digital garden where I can nurture ideas, share what
+    I’m working on, and write about any topics that I find interesting.
+    Personally, I want to spend more time writing about stuff that I care about.
   </p>
   <div class="now">
     <span><em>Now</em></span>
-    <p>Currently I’m working as a freelance web designer and developer for a sustainability brand and education community. <a href="">Read more about what I've been up to recently →</a></p>
+    <p>
+      Currently I’m working as a freelance web designer and developer for a
+      sustainability brand and education community. <a href=""
+        >Read more about what I've been up to recently →</a
+      >
+    </p>
   </div>
-  <p>I’m also still open to full-time product and web design roles. <a href="/about/">Please reach out through my contacts →</a></p>
   <p>
-    I built this site as my digital garden where I can nurture ideas, share what I’m working on, and write about any topics that I find interesting. Personally, I want to spend more time writing about stuff that I care about.
+    I’m also still open to full-time product and web design roles. Please reach
+    out through my contacts below.
   </p>
+
+  <style>
+    .now {
+      padding: 1rem;
+      border-left: 4px solid var(--secondary-color);
+      background-color: var(--primary-color);
+      > p {
+        margin: 0;
+      }
+    }
+  </style>
 </BaseLayout>

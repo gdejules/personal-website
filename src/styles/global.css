@@ -114,6 +114,10 @@ figure img {
   }
 }
 
+.menu {
+  color: var(--dark-color);
+}
+
 .article-label {
   display: flex;
   gap: 20px;
