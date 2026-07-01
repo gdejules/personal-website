@@ -137,6 +137,24 @@ figure img {
   margin-top: 0;
 }
 
+footer .socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.socials div:hover,
+.socials div a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
 /* nav styles */
 .nav-links {
   width: 100%;
@@ -196,7 +214,7 @@ html.dark {
   }
 }
 
-.dark a {
+.dark a:hover {
   color: var(--tertiary-color);
 }
 
@@ -220,6 +238,12 @@ html.dark {
 
 .dark .article-label span {
   color: var(--white-lower-opacity);
+}
+
+.dark .socials div:hover,
+.dark .socials div a:hover {
+  color: var(--tertiary-color);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 720px) {
