@@ -1,38 +1,29 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-const shorten = { 
-  year: 'numeric', 
-  month: 'short',
-  day: 'numeric' 
+const shorten = {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
 };
 ---
-<style>  
+
+<style>
   a {
-      color: purple;
-      text-decoration: none;
+    text-decoration: none;
   }
-  
+
   .tag-list {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
   }
-
-  .blog-tag {
-    margin: 0.25em;
-    display: inline-flex;
-    background-color: plum;
-    border-radius: 16px;
-    padding: 6px 12px;
-    font-size: 14px;
-  }
 </style>
 
 <BaseLayout pageTitle={frontmatter.title}>
   <div class="article-label">
-    <span>{frontmatter.pubDate.toLocaleDateString('en-US', shorten)}</span>
+    <span>{frontmatter.pubDate.toLocaleDateString("en-US", shorten)}</span>
     <span>{frontmatter.readTime}</span>
   </div>
   <h1 class="article-title">{frontmatter.title}</h1>
@@ -43,14 +34,20 @@ const shorten = {
     style="max-width: 100%; height: auto;"
     alt={frontmatter.image.alt}
   />
-  <p style="font-size: clamp(0.8rem, 0.9rem, 1rem); font-weight: 300; font-style: italic; text-align: right; margin: 0;">{frontmatter.image.caption}</p>
+  <p
+    style="font-size: clamp(0.8rem, 0.9rem, 1rem); font-weight: 300; font-style: italic; text-align: right; margin: 0;"
+  >
+    {frontmatter.image.caption}
+  </p>
   <slot />
   <div class="tag-list">
-    {frontmatter.tags.map((tag: string) => (
-      <p class="blog-tag">
-        <a href={`/tags/${tag}`}>{tag}</a>
-      </p>
-      ))}
+    {
+      frontmatter.tags.map((tag: string) => (
+        <p class="blog-tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
     <!-- {frontmatter.tags.map((tag: string) => <li class="blog-tag">{tag}</li>)} -->
   </div>
 </BaseLayout>

@@ -7,6 +7,8 @@
   --dark-color: #1b2632;
   --dark-lower-opacity: hsla(211, 30%, 15%, 0.8);
   --white-lower-opacity: hsla(0, 0%, 100%, 0.65);
+  --secondary-lower-opacity: hsla(14, 48%, 43%, 0.2);
+  --tertiary-lower-opacity: hsla(30, 100%, 69%, 0.2);
 }
 
 h1 {
@@ -200,6 +202,39 @@ a:hover {
   color: var(--secondary-color);
 }
 
+#skills p {
+  margin-block-end: 0;
+}
+
+.skill {
+  border: 1px solid var(--dark-lower-opacity);
+  border-radius: 4rem;
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-merriweather);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.blog-tag {
+  margin: 0.25rem;
+  display: inline-flex;
+  border: 1px solid var(--dark-lower-opacity);
+  border-radius: 4rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  > a {
+    font-weight: 500;
+  }
+}
+
+.blog-tag:hover {
+  background-color: var(--secondary-lower-opacity);
+  border: 1px solid var(--secondary-color);
+  > a {
+    color: var(--secondary-color);
+  }
+}
+
 /* dark mode */
 html.dark {
   background-color: var(--dark-color);
@@ -243,6 +278,25 @@ html.dark {
 
 .dark .article-label span {
   color: var(--white-lower-opacity);
+}
+
+.dark .skill {
+  border: 1px solid var(--white-lower-opacity);
+}
+
+.dark .blog-tag {
+  border: 1px solid var(--white-lower-opacity);
+  > a {
+    font-weight: 500;
+  }
+}
+
+.dark .blog-tag:hover {
+  background-color: var(--tertiary-lower-opacity);
+  border: 1px solid var(--tertiary-color);
+  > a {
+    color: var(--tertiary-color);
+  }
 }
 
 .dark .socials div:hover {
