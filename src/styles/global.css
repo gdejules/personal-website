@@ -222,14 +222,12 @@ a:hover {
   border-radius: 4rem;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
-  > a {
-    font-weight: 500;
-  }
 }
 
 .blog-tag:hover {
   background-color: var(--secondary-lower-opacity);
   border: 1px solid var(--secondary-color);
+  /* This will change link text color when mouse already enter the tag label */
   > a {
     color: var(--secondary-color);
   }
@@ -286,9 +284,6 @@ html.dark {
 
 .dark .blog-tag {
   border: 1px solid var(--white-lower-opacity);
-  > a {
-    font-weight: 500;
-  }
 }
 
 .dark .blog-tag:hover {
