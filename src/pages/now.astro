@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Now | Gde Juliartha";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1>Now</h1>
+  <p>My current focus, learning, interest, and hobbies.</p>
+  <h2>July 1, 2026</h2>
+  <div class="last-update">
+    <div class="update">
+      <p>💼 Professional</p>
+      <p>
+        Working on two web development projects while also learning HTML, CSS,
+        and JavaScript more deeply this time. I'm back to explore product/UX
+        design and web development roles this time. Honestly, feeling more
+        excited coding in VS Code rather than designing in Figma right now.
+      </p>
+    </div>
+    <div class="update">
+      <p>🔍 Learning</p>
+      <p>
+        Currently excited with HTML, CSS, JavaScript, and React. Also learning
+        about JAMStack and static-site generator. Been pretty obsessed with
+        these technologies since the start of the year. In the midst of AI hype,
+        I want to understand the fundamentals first and honing my craft. I'm
+        still use AI for exploration though and debugging (handling those
+        dependencies in the deployment sure helps a lot).
+      </p>
+    </div>
+    <div class="update">
+      <p>📚 Reading</p>
+      <p>
+        I always read more than one book at a time. Currently reading 'Before
+        the Coffe Gets Cold' by Toshikazu Kawaguchi, '12 Rules for Life' by
+        Jordan Peterson, and 'How to Stop Worrying and Start Living' by Dale
+        Carnegie.
+      </p>
+    </div>
+    <div class="update">
+      <p>🎧 Listening</p>
+      <p>
+        I'm pretty much into Fred Again for the latest three years. His latest
+        collaboration with Thomas Bangalter has been in my playlist rotation for
+        quite a while.
+      </p>
+    </div>
+    <div class="update">
+      <p>🎾 Hobbies</p>
+      <p>
+        Tennis has been part of my life since 2023. Enjoy both playing it and
+        watching the professional competition since. Currently I don't play much
+        due to work and hoping to get back on the court more frequently soon.
+      </p>
+    </div>
+  </div>
+
+  <style>
+    .last-update {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .update {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      > p {
+        margin: 0;
+      }
+    }
+  </style>
+</BaseLayout>
